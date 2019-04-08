@@ -1,29 +1,11 @@
 favorite_languages = {
-	'jen': 'python',
-	'sarah': 'c',
-	'edward': 'ruby',
-	'phil': 'python',
+	'jen': ['python', 'ruby'],
+	'sarah': ['c'],
+	'edward': ['ruby', 'go'],
+	'phil': ['python', 'haskell'],
 	}
-'''print("Sarah's favorite language is " +
-	favorite_languages['sarah'].title() +
-	".")
-'''
 
-'''for name, language in favorite_languages.items():
-	print(name.title() + "'s favorite language is " +
-		language.title() + ".")
-'''
-#for name in favorite_languages.keys(): 
-# Явное указание, можно пропустить.
-'''for name in favorite_languages:
-	print(name.title())'''
-friends = ['edward', 'sarah']
-for name in favorite_languages.keys():
-	print(name.title())
-
-	if name in friends:
-		print("Hi " + name.title() +
-			", I see your favorite language is " +
-			favorite_languages[name].title() + "!")
-#Почему name ключ, почему выходит value? Почему не имя?
-#set() = distinct sql
+for name, languages in favorite_languages.items():
+	print("\n" + name.title() + "'s favorite languages are:")
+	for language in languages:
+		print("\t" + language.title())
